@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body{
+            background-color:lemonchiffon;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .error {
+            color: red;
+        }
+        .exito {
+            color: green;
+        }
+        h1 {
+            color:blueviolet;
+            font-family: Arial, sans-serif; 
+            text-align: center;       
+            font-weight: bold;        
+        }
+        form{
+            display:flex;
+            flex-direction: column;
+            max-width: 300px;
+            margin:auto;
+            gap: 10px;
+        }
+    </style>
+    <head>
+        <title>Practicando html 3</title>
+    </head>
+    <body>
+        <h1>Formulario</h1>
+        <form id="miFormulario">
+            <input type="text" id="nombre" placeholder="Nombre">
+            <input type="email" id="correo" placeholder="Correo electrónico">
+            <button type="submit">Enviar</button>
+            <p id="mensaje"></p>
+        </form>
+
+        <script>
+            const formulario = document.getElementById("miFormulario");
+            const mensaje = document.getElementById("mensaje");
+
+            formulario.onsubmit = function(e) {
+            e.preventDefault(); // evita recargar la página
+
+            const nombre = document.getElementById("nombre").value;
+            const correo = document.getElementById("correo").value;
+
+            if (nombre === "" || correo === "") {
+                mensaje.textContent = "completa todos los campos";
+                mensaje.className = "error";
+            } else {
+                mensaje.textContent = "enviado";
+                mensaje.className = "exito";
+            }
+            };
+        </script>
+
+    </body>
+</html>

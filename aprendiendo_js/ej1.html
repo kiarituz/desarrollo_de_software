@@ -9,6 +9,12 @@
             font-size: 16px;
             cursor: pointer;
         }
+        h1 {
+            color:blueviolet;
+            font-family: Arial, sans-serif; /* Tipo de letra */
+            text-align: center;       /* Alineación (left, right, center) */
+            font-weight: bold;        
+        }
     </style>
     <head>
         <title>Practicando html</title>
@@ -20,8 +26,10 @@
 
         <script>
             function cambiarColor(){
-                
+                const color = "#" + Math.floor(Math.random() * 16000000).toString(16);
+                document.body.style.backgroundColor = color;
             }
         </script>
+
     </body>
 </html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body{
+            background-color:lemonchiffon;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        h1 {
+            color:blueviolet;
+            font-family: Arial, sans-serif; 
+            text-align: center;       
+            font-weight: bold;        
+        }
+        .contador-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 40px;
+        }
+        #contador {
+            font-size: 48px;
+            width: 80px;
+            text-align: center;
+        }
+    </style>
+    <head>
+        <title>Practicando html 4</title>
+    </head>
+    <body>
+        <h1>Contador</h1>
+        
+        <div class="contador-container">
+            <button onclick="decrementar()">-</button>
+            <div id="contador">0</div>
+            <button onclick="incrementar()">+</button>
+        </div>
+
+        <script>
+            let valor = 0;
+            const contador = document.getElementById("contador");
+
+            function incrementar() {
+                valor++;
+                contador.textContent = valor;
+            }
+
+            function decrementar() {
+                valor--;
+                contador.textContent = valor;
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body{
+            background-color:lemonchiffon;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        h1 {
+            color:blueviolet;
+            font-family: Arial, sans-serif; 
+            text-align: center;       
+            font-weight: bold;        
+        }
+        li {
+            cursor: pointer; 
+        }
+        li:hover {
+            background:cadetblue; 
+        }
+    </style>
+    <head>
+        <title>Practicando html 2</title>
+    </head>
+    <body>
+        <h1>Lista tareas</h1>
+        <button onclick="agregarTarea()">agregar elemento</button>
+        <input id="tareaIngresada" type="text">
+        <ul id="lista">
+            listita
+        </ul>
+
+        <script>
+            function agregarTarea(){
+                const input = document.getElementById("tareaIngresada");
+                const texto= input.value;
+                const elemento = document.createElement("li");
+                elemento.textContent = texto;
+                elemento.onclick = () => elemento.remove();
+                document.getElementById("lista").appendChild(elemento);
+                input.value = "";
+            }
+        </script>
+
+    </body>
+</html>

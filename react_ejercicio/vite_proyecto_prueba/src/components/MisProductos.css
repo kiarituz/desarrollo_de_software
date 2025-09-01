@@ -1,4 +1,8 @@
 /* MisProductos.css */
+body {
+  cursor: url("https://img.icons8.com/ios-filled/50/F25081/3d-pointer.png") 16 16, auto;
+}
+
 
 /* Contenedor principal */
 .mis-productos {

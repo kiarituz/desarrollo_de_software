@@ -5,6 +5,11 @@
   text-align: center;
 }
 
+body {
+  cursor: url("https://img.icons8.com/ios-filled/50/F25081/3d-pointer.png") 16 16, auto;
+  background-color:bisque;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -40,3 +45,22 @@
 .read-the-docs {
   color: #888;
 }
+
+.heart {
+  position: fixed;
+  pointer-events: none;
+  animation: floatUp 1s linear forwards;
+  font-size: 20px;
+}
+
+@keyframes floatUp {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.5);
+  }
+}
+

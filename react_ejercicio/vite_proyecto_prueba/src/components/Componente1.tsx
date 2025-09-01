@@ -1,7 +1,15 @@
-export default function MiBoton(){
-    return(
-        <button> Botoncitop </button>
-    );
+type Props = {
+  onRefrescar: () => void;
+};
+
+export default function MiBoton({ onRefrescar }: Props) {
+  return (
+    <button onClick={() => onRefrescar()}>
+      Refrescar lista
+    </button>
+  );
 }
+
+
 
 

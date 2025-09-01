@@ -1,4 +1,3 @@
-//import { useState, useEffect } from "react";
 import './MisProductos.css';
 
 type Producto = {
@@ -12,26 +11,6 @@ type Props = {
 };
 
 function MisProductos({ productos }: Props) {
-    /*const [productos, setProductos] = useState<Producto[]>([]);
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-    fetch("http://127.0.0.1:8000/productos/")
-        .then((res) => res.json())
-        .then((data) => {
-            setProductos(data);
-            setLoading(false);
-        })
-        .catch((err) => {
-            console.error("Error al obtener productos:", err);
-            setLoading(false);
-        });
-    }, []);
-
-    if (loading) {
-        return <p>Cargando productos...</p>;
-    }*/
-
     return (
         <div className="mis-productos">
             <h2>Lista de Productos</h2>
